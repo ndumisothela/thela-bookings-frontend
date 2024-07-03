@@ -1,0 +1,31 @@
+.mail{
+    width: 100%;
+    margin-top: 50px;
+    background-color: #003580;
+    background-image: url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2754.jpg?ga=GA1.1.2098176417.1718957229&semt=ais_user");
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .mailInputContainer>input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .mailInputContainer>button{
+    height: 50px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
