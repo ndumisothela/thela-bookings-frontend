@@ -53,3 +53,28 @@ const AuthReducer = (state, action) => {
       return state; // Return the current state if action type is not recognized
   }
 };
+
+// Define the context provider component
+export const AuthContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE); // Use useReducer to manage state with the reducer and initial state
+
+  useEffect(() => {
+    // Save user to localStorage whenever state.user changes
+    localStorage.setItem("user", JSON.stringify(state.user));
+  }, [state.user]);
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user: state.user, // Provide user state
+        loading: state.loading, // Provide loading state
+        error: state.error, // Provide error state
+        dispatch, // Provide dispatch function to update state
+      }}
+    >
+      {children} {/* Render children components within the provider */}
+    </AuthContext.Provider>
+  );
+};
+
+
