@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate hook for n
 
 const Reserve = ({ setOpen, hotelId }) => { // Define the Reserve functional component with setOpen and hotelId as props
   const [selectedRooms, setSelectedRooms] = useState([]); // State to track selected rooms
-  const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`); // Fetch data for rooms based on hotelId
+  const { data, loading, error } = useFetch(`https://thela-bookings-backend.onrender.com/api/hotels/room/${hotelId}`); // Fetch data for rooms based on hotelId
   const { dates } = useContext(SearchContext); // Access dates from SearchContext
 
   const getDatesInRange = (startDate, endDate) => { // Function to get all dates in a given range
@@ -53,7 +53,7 @@ const Reserve = ({ setOpen, hotelId }) => { // Define the Reserve functional com
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
+          const res = axios.put(`https://thela-bookings-backend.onrender.com/api/rooms/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data; // Update room availability for selected dates

@@ -18,7 +18,7 @@ const List = () => {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 1 }&max=${max || 9999}`
+    `https://thela-bookings-backend.onrender.com/api/hotels?city=${destination}&min=${min || 1 }&max=${max || 9999}`
   );
 
   const handleClick = () => {

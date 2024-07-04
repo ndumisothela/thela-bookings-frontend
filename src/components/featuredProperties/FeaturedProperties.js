@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch"; // Importing a custom hook named us
 import "./FeaturedProperties.css"; // Importing styles specific to FeaturedProperties component
 
 const FeaturedProperties = () => { // Define a functional component named FeaturedProperties
-  const { data, loading, error } = useFetch("/hotels?featured=true&limit=4"); // Destructuring values returned by useFetch hook for fetching featured hotels data
+  const { data, loading, error } = useFetch("https://thela-bookings-backend.onrender.com/api/hotels?featured=true&limit=4"); // Destructuring values returned by useFetch hook for fetching featured hotels data
 
   return (
     <div className="fp"> {/* Start of JSX: parent container with class fp */}

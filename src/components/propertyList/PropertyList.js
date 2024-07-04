@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch"; // Import the useFetch custom hook 
 import "./PropertyList.css"; // Import the CSS file for styling the PropertyList component
 
 const PropertyList = () => { // Define the PropertyList functional component
-  const { data, loading } = useFetch("/hotels/countByType"); // Use the useFetch hook to fetch data from the specified endpoint and extract data and loading state
+  const { data, loading } = useFetch("https://thela-bookings-backend.onrender.com/api/hotels/countByType"); // Use the useFetch hook to fetch data from the specified endpoint and extract data and loading state
 
   const images = [ // Define an array of image URLs for different property types
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",
