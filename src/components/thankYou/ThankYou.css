@@ -1,0 +1,17 @@
+.thanks{
+    width: 100%;
+    height: 90vh; 
+  background-image: url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2754.jpg?ga=GA1.1.2098176417.1718957229&semt=ais_user"); 
+background-size: contain;
+}
+.ty{
+    color: green;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+}
+.see{
+    color: white;
+    display: flex;
+    justify-content: center;
+}

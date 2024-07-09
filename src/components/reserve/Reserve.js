@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon component
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"; // Import specific FontAwesome icon
-
+import {Link} from "react-router-dom"
 import "./Reserve.css"; // Import the CSS file for styling the Reserve component
 import useFetch from "../../hooks/useFetch"; // Import the custom useFetch hook
 import { useContext, useState } from "react"; // Import useContext and useState hooks from React
@@ -60,7 +60,7 @@ const Reserve = ({ setOpen, hotelId }) => { // Define the Reserve functional com
         })
       );
       setOpen(false); // Close the modal
-      navigate("/"); // Navigate to home page
+      navigate("/thankyou"); // Navigate to home page
     } catch (err) {}
   };
 
@@ -98,9 +98,11 @@ const Reserve = ({ setOpen, hotelId }) => { // Define the Reserve functional com
             </div>
           </div>
         ))}
+        <Link path="/thankyou">
         <button onClick={handleClick} className="rButton"> {/* Button to reserve selected rooms */}
           Reserve Now!
         </button>
+        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import "./Featured.css"; // Importing styles specific to Featured component
 
 const Featured = () => { // Define a functional component named Featured
   const { data, loading, error } = useFetch( // Destructuring values returned by useFetch hook for fetching hotel counts by city
-    "/hotels/countByCity?cities=Pretoria,Durban,Mpumalanga"
+    "https://thela-bookings-backend.onrender.com/api/hotels/countByCity?cities=Pretoria,Durban,Mpumalanga"
   );
 
   return (
