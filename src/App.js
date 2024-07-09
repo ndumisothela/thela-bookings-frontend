@@ -8,6 +8,7 @@ import Home from "./pages/home/Home"; // Import the Home component
 import Hotel from "./pages/hotel/Hotel"; // Import the Hotel component
 import List from "./pages/list/List"; // Import the List component
 import Login from "./pages/login/Login"; // Import the Login component
+import Register from "./pages/register/Register";
 
 function App() { // Define the main App component
   return (
@@ -17,6 +18,7 @@ function App() { // Define the main App component
         <Route path="/hotels" element={<List/>}/> {/* Define a route for the hotel list page */}
         <Route path="/hotels/:id" element={<Hotel/>}/> {/* Define a dynamic route for individual hotel details */}
         <Route path="/login" element={<Login/>}/> {/* Define a route for the login page */}
+        <Route path="/register" element={<Register/>}/>
       </Routes>
     </BrowserRouter>
   );

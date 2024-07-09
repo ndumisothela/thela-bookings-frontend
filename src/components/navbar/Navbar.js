@@ -23,10 +23,14 @@ const Navbar = () => { // Define the Navbar component
           </div>
         ) : (
           <div className="navItems"> {/* Container for navigation items */}
-            <button className="navButton">Register</button> {/* Register button */}
+          <Link to="/register" style={{ color: "inherit", textDecoration: "none" }}>
+            <button className="navButton">Register</button></Link> {/* Register button */}
             <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}> {/* Link to the login page */}
               <button className="navButton">Login</button> {/* Login button */}
             </Link>
+            <a href="https://thela-bookings-admin.onrender.com" style={{ color: "inherit", textDecoration: "none" }}> {/* Link to the external admin URL */}
+            <button className="navButton">admin</button>
+            </a>
           </div>
         )}
       </div>
